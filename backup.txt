@@ -1,0 +1,28 @@
+#ffmpeg -i scoreboard.png -filter_complex "overlay=0:0" -ar 44100 -ac 2 -f alsa -i hw:1,0 -f v4l2 -codec:v h264 -framerate 30 -video_size 1280x720 -itsoffset 0.5 -i /dev/video1 sample.avi
+
+
+ffmpeg \
+    -ar 44100 \
+    -ac 2 \
+    -f alsa \
+    -i hw:1,0 \
+    -f v4l2 \
+    -codec:v h264 \
+    -framerate 30 \
+    -video_size 1280x720 \
+    -itsoffset 0.5 \
+    -i /dev/video1 \
+    -copyinkf \
+    -codec:v copy \
+    -codec:a aac \
+    -ab 128k \
+    -g 10 \
+    -f flv \
+    -strict -2\
+    -re -y \
+    -loop 1 \
+    -f image2  \
+    -i scoreboard.png \
+    -filter_complex "colorchannelmixer=aa=1.0,overlay,format=rgba,lutrgb=a=1"  \
+    -thread_queue_size 512 \
+     rtmp://a.rtmp.youtube.com/live2/fj9e-m816-wgbf-33tr

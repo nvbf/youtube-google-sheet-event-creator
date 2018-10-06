@@ -1,0 +1,26 @@
+{
+  "name": "youtube-google-sheet-event-creator",
+  "version": "1.0.0",
+  "description": "Create youtube events based on a google sheet document. Fully customisable to support almost any google sheets document",
+  "main": "auth.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nvbf/youtube-google-sheet-event-creator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nvbf/youtube-google-sheet-event-creator/issues"
+  },
+  "homepage": "https://github.com/nvbf/youtube-google-sheet-event-creator#readme",
+  "dependencies": {
+    "bluebird": "^3.5.2",
+    "debug": "^4.0.1",
+    "googleapis": "^34.0.0",
+    "readline": "^1.3.0"
+  }
+}
