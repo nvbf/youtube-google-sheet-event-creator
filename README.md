@@ -1,11 +1,24 @@
 # Youtube Google sheet Event Creator
 
-Create youtube events based on a google sheet document. Fully customisable to support almost
-any google sheets document
+## Basic idea behind this project
+
+Lower the entrybar for pepole to create events on youtube.
+If you need to create a lot of events, there can be quite a daunting task to crate this for hand.
+And requirements changes all the time for most ppl, so by enabling smart mind,
+that are not programmers to controll the creation of events based on a google sheet can be very powerfull.
 
 ## Description
 
 Based on a google sheet lets you to create, start and stop a youtube event!
+
+# Requirements
+
+## Enable Goole API and get API Key
+
+1. Create a [Project to host your credentials in GCP](https://console.developers.google.com/projectselector/apis/credentials)
+1. Enable [YouTube Live Streaming API](https://console.developers.google.com/apis/library/youtube.googleapis.com) ([more info](https://developers.google.com/youtube/v3/live/getting-started))
+1. Enable [Google Sheets Api](https://console.developers.google.com/apis/api/sheets.googleapis.com/) ([more info](https://developers.google.com/sheets/api/))
+1. On the [Credential page](https://console.developers.google.com/apis/credentials) choose `create credentials` and then choose `api key`, store the key.
 
 ## Example
 
